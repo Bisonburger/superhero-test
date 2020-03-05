@@ -1,27 +1,22 @@
-# SuperHero
+# SuperHero - Programming Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+The SuperHero program is unfinished...
 
-## Development server
+Finish as many (or as few) as you can in the time - work in any order
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Modify the super-hero-list component to show the superhero cards instead of the names
+  * Cards should each be the same size
+  * Fix the super-hero-card display for areas where it is broken
+  * Show cards in rows of 3; but scale down when the display size changes (i.e. show 2 cards/row, then 1/row)
+* Modify the cards so that when they are clicked on - you go to the super-hero-details page
+* Modify the super-hero-details page to show the detail for the clicked on card
+  * Use your UI/UX skills to design a 'user friendly' look (feel free to change the template provided)
+* Modify the super-hero-list search to filter the list of cards as you type in the search box
+  * If you type man in the search box - you should see the cards for Batman, Wonder Woman, Aquaman, and Superman (as they contain man)
+  * The search should ignore capitalization (Man = man = MAN...)
+  * Use client side filtering for this
+* Add back button to the super-hero-detail page to return to the list
+  * Bonus - keep the list in the order in which you left it (i.e. keep the filter in place)
+* Add a 'page not found' page when the user navigates to an managed page
+* Write a test for the search functions you added to verify the search results
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

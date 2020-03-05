@@ -1,0 +1,14 @@
+<div class="container-fluid">
+<form>
+  <div class="form-group">
+    <input type="text" class="form-control" id="serach" placeholder="Filter by Superhero name">
+  </div>
+</form>
+
+  <ul *ngFor="let superhero of superheroes">
+    <li>
+      {{superhero.name}}
+    </li>
+  </ul>
+</div>
+
