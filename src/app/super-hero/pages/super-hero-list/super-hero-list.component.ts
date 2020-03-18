@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { SuperHero } from '../../store/super-hero.model';
 import { Store } from '@ngrx/store';
 import { State } from 'src/app/app.reducer';
+import { FormControl } from '@angular/forms';
 import * as SuperHeroActions from '../../store/super-hero.actions';
 
 @Component({
@@ -15,13 +16,21 @@ export class SuperHeroListComponent implements OnInit, OnDestroy {
   superheroes: SuperHero[] = [];
   subscription$: Subscription;
 
+  search: FormControl = new FormControl('');
+
   constructor(private readonly store: Store<State>) {
     this.store.dispatch( SuperHeroActions.loadSuperHeroesAction() );
   }
 
   ngOnInit() {
     this.subscription$ = this.store.select( s => s.superhero )
-      .subscribe( (superhero) => this.superheroes = superhero.heroes );
+      .subscribe( (state) => this.superheroes = state.heroes );
+    this.search.valueChanges.subscribe( v => this.searchChanged( v ) );
+  }
+
+  searchChanged( searchValue: string ){
+    // FIXME:  make it search
+    console.log( `search = ${searchValue}` );
   }
 
   ngOnDestroy() {

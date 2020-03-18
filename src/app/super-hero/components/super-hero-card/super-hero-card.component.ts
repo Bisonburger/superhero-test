@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuperHeroCardComponent implements OnInit {
 
+  //FIXME:  Pass in the superhero to display
+
   constructor() { }
 
   ngOnInit() {

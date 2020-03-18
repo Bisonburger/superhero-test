@@ -21,6 +21,18 @@ export class SuperHeroEffects {
       )
     )
   );
+
+  LoadSuperHero$: Observable<Action> = createEffect( () =>
+    this.actions$.pipe(
+      ofType( SuperHeroActions.loadSuperHeroAction ),
+      switchMap( action =>
+        this.superheroSvc.findOne( action.heroId ).pipe(
+          map( (hero: SuperHero) => SuperHeroActions.success_loadSuperHeroAction( {hero} ) )
+        )
+      )
+    )
+  );
+
     constructor(private readonly superheroSvc: SuperHeroService, private readonly actions$: Actions) {
     }
 }

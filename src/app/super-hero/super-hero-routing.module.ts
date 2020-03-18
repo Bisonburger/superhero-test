@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'list', component: SuperHeroListComponent },
+
+  // FIXME: pass the clicked on superhero
   { path: 'detail', component: SuperHeroDetailsComponent},
 
 ];

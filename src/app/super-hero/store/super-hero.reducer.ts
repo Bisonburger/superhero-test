@@ -12,12 +12,14 @@ export interface State {
   heroes: SuperHero[];
   error: boolean;
   errorMsg: string;
+  activeHero: SuperHero;
 }
 
 export const initialState: State = {
     heroes: [],
     error: false,
-    errorMsg: undefined
+    errorMsg: undefined,
+    activeHero: undefined
 };
 
 const taskReducer = createReducer(
@@ -33,6 +35,18 @@ const taskReducer = createReducer(
       error: true,
       errorMsg: error
     })),
+    on(ActionTypes.success_loadSuperHeroAction, (state, { hero }) => ({
+      ...state,
+      activeHero: hero,
+      error: false
+  })),
+  on(ActionTypes.fail_loadSuperHeroesAction, ( state, {error} ) => ({
+    ...state,
+    activeHero: undefined,
+    error: true,
+    errorMsg: error
+  })),
+
 );
 
 /**

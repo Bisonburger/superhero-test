@@ -1,4 +1,3 @@
-import { SuperHeroListComponent } from './super-hero/pages/super-hero-list/super-hero-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { metaReducers, reducers } from './app.reducer';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 
 
@@ -29,9 +29,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     EffectsModule.forRoot([]),
     BrowserModule,
     AppRoutingModule,
-    SuperHeroModule,
-    ReactiveFormsModule,
-    FormsModule
+    SuperHeroModule
   ],
   providers: [],
   bootstrap: [AppComponent]
