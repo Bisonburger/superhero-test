@@ -8,7 +8,8 @@ Finish as many (or as few) as you can in the time - work in any order
   * Cards should each be the same size
   * Fix the super-hero-card display for areas where it is broken
   * Show cards in rows of 3; but scale down when the display size changes (i.e. show 2 cards/row, then 1/row)
-* Modify the cards so that when they are clicked on - you go to the super-hero-details page
+  * Bonus - add a button(s) to allow the user to switch between card and list displays
+* Modify the cards/list-item so that when they are clicked on - you go to the super-hero-details page
 * Modify the super-hero-details page to show the detail for the clicked on card
   * Use your UI/UX skills to design a 'user friendly' look (feel free to change the template provided)
 * Modify the super-hero-list search to filter the list of cards as you type in the search box
