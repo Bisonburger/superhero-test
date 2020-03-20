@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
 
 import { SuperHero } from './super-hero.model';
-import { Observable, of } from 'rxjs';
-
-import { superHeroes } from '../super-hero.data';
+import { Observable, of, forkJoin } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
-export class SuperHeroService{
+export class SuperHeroService {
+
+  constructor( private readonly http: HttpClient ) {}
+
   findAll(): Observable<SuperHero[]>{
-    return of( superHeroes );
+    return this.http.get<SuperHero[]>( `https://akabab.github.io/superhero-api/api/all.json` );
   }
 
   findOne( searchId: string ): Observable<SuperHero>{
-    return of( superHeroes.find( ({id}) => id === searchId ) );
+    return this.http.get<SuperHero>( `https://akabab.github.io/superhero-api/api/id/${searchId}.json` );
   }
 
-  save( superhero: SuperHero ): void{
-    superHeroes.push( superhero );
-  }
 }
