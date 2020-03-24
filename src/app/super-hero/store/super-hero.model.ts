@@ -1,6 +1,7 @@
 export interface SuperHero     {
   id: string;
   name: string;
+  slug: string;
   powerstats: {
     intelligence: number,
     strength: number,
@@ -10,10 +11,13 @@ export interface SuperHero     {
     combat: number
   };
   biography: {
-    name: string,
+    fullName: string,
+    alterEgos: string,
     aliases?: string[],
     publisher: string,
-    alignment: string
+    alignment: string,
+    placeOfBirth: string,
+    firstAppearance: string
   };
   appearance: {
     gender: string,
@@ -23,5 +27,18 @@ export interface SuperHero     {
     eyeColor: string,
     hairColor: string
   };
-  image?: string;
+  work: {
+    occupation: string,
+    base: string
+  };
+  connections: {
+    groupAffiliation: string,
+    relatives: string
+  }
+  images: {
+    xs: string,
+    sm: string,
+    md: string,
+    lg: string
+  }
 }
