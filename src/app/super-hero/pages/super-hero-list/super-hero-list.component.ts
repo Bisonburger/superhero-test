@@ -29,7 +29,7 @@ export class SuperHeroListComponent implements OnInit, OnDestroy {
   }
 
   searchChanged( searchValue: string ){
-    // FIXME:  make it search
+    // FIXME:  make it search - instead of printing
     console.log( `search = ${searchValue}` );
   }
 
